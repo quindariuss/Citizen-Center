@@ -1,12 +1,32 @@
-{
-  "type": "FeatureCollection",
-  "features": [
+const tokenID =
+  "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjZSNDg3NFE2SjUifQ.eyJpc3MiOiIyNVkyNEw1OThZIiwiaWF0IjoxNjI3ODUwMDA0LCJleHAiOjE2MzAzNTU4NDh9.fdoeHWEVFDYCylDw-AQ8TK-93kfCu4eCfqc691vohbU3eBq-EMn86dGXpMEWrzCUK6kHJdXiKgV5oKvXHj9iQA";
+
+mapkit.init({
+  authorizationCallback: function (done) {
+    done(tokenID);
+  },
+});
+
+console.log("Hi");
+
+var map = new mapkit.Map("map");
+var center = new mapkit.Coordinate(33.769514, -84.413465);
+var span = new mapkit.CoordinateSpan(0.106, 0.106);
+var region = new mapkit.CoordinateRegion(center, span);
+map.region = region;
+map.addEventListener("select", function (event) {
+  if (event.overlay) console.log("You selected an overlay.");
+});
+
+var bob = {
+  type: "FeatureCollection",
+  features: [
     {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
+      type: "Feature",
+      properties: {},
+      geometry: {
+        type: "Polygon",
+        coordinates: [
           [
             [-84.34925079345703, 33.740257477036955],
             [-84.3500018119812, 33.740391302651105],
@@ -176,23 +196,23 @@
             [-84.34598922729492, 33.71587989035713],
             [-84.34744834899902, 33.71570140518808],
             [-84.34959411621094, 33.71541582814586],
-            [-84.34925079345703, 33.740257477036955]
-          ]
-        ]
-      }
+            [-84.34925079345703, 33.740257477036955],
+          ],
+        ],
+      },
     },
     {
-      "type": "Feature",
-      "properties": {
-        "stroke": "#555555",
+      type: "Feature",
+      properties: {
+        stroke: "#555555",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "fill": "#ff2600",
-        "fill-opacity": 0.5
+        fill: "#ff2600",
+        "fill-opacity": 0.5,
       },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
+      geometry: {
+        type: "Polygon",
+        coordinates: [
           [
             [-84.39307004213332, 33.75101638997764],
             [-84.39134001731873, 33.753228669101894],
@@ -317,23 +337,23 @@
             [-84.39547598361969, 33.75825960749378],
             [-84.39481347799301, 33.75349404955763],
             [-84.39435482025146, 33.751656440310185],
-            [-84.39307004213332, 33.75101638997764]
-          ]
-        ]
-      }
+            [-84.39307004213332, 33.75101638997764],
+          ],
+        ],
+      },
     },
     {
-      "type": "Feature",
-      "properties": {
-        "stroke": "#555555",
+      type: "Feature",
+      properties: {
+        stroke: "#555555",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "fill": "#ff9300",
-        "fill-opacity": 0.5
+        fill: "#ff9300",
+        "fill-opacity": 0.5,
       },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
+      geometry: {
+        type: "Polygon",
+        coordinates: [
           [
             [-84.38990235328674, 33.771299424203306],
             [-84.39013838768005, 33.77310985747168],
@@ -499,23 +519,23 @@
             [-84.39866781234741, 33.77133509813474],
             [-84.39614653587341, 33.771344016615274],
             [-84.39217686653137, 33.77130834268756],
-            [-84.38990235328674, 33.771299424203306]
-          ]
-        ]
-      }
+            [-84.38990235328674, 33.771299424203306],
+          ],
+        ],
+      },
     },
     {
-      "type": "Feature",
-      "properties": {
-        "stroke": "#555555",
+      type: "Feature",
+      properties: {
+        stroke: "#555555",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "fill": "#fffb00",
-        "fill-opacity": 0.5
+        fill: "#fffb00",
+        "fill-opacity": 0.5,
       },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
+      geometry: {
+        type: "Polygon",
+        coordinates: [
           [
             [-84.44604635238646, 33.75309486351862],
             [-84.44616436958313, 33.75066848605049],
@@ -713,23 +733,23 @@
             [-84.44164752960205, 33.75437046825204],
             [-84.44284915924072, 33.75413854153031],
             [-84.44426536560059, 33.7537014471571],
-            [-84.44604635238646, 33.75309486351862]
-          ]
-        ]
-      }
+            [-84.44604635238646, 33.75309486351862],
+          ],
+        ],
+      },
     },
     {
-      "type": "Feature",
-      "properties": {
-        "stroke": "#555555",
+      type: "Feature",
+      properties: {
+        stroke: "#555555",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "fill": "#00f900",
-        "fill-opacity": 0.5
+        fill: "#00f900",
+        "fill-opacity": 0.5,
       },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
+      geometry: {
+        type: "Polygon",
+        coordinates: [
           [
             [-84.34950560331345, 33.721881238169374],
             [-84.34907913208008, 33.721903547229836],
@@ -1027,23 +1047,23 @@
             [-84.35075283050537, 33.74047159791936],
             [-84.3492078781128, 33.74029316388783],
             [-84.34933662414551, 33.73233462866422],
-            [-84.34950560331345, 33.721881238169374]
-          ]
-        ]
-      }
+            [-84.34950560331345, 33.721881238169374],
+          ],
+        ],
+      },
     },
     {
-      "type": "Feature",
-      "properties": {
-        "stroke": "#555555",
+      type: "Feature",
+      properties: {
+        stroke: "#555555",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "fill": "#00fdff",
-        "fill-opacity": 0.5
+        fill: "#00fdff",
+        "fill-opacity": 0.5,
       },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
+      geometry: {
+        type: "Polygon",
+        coordinates: [
           [
             [-84.3313980102539, 33.77331497804007],
             [-84.32955265045166, 33.772369635684605],
@@ -1131,23 +1151,23 @@
             [-84.34886455535889, 33.77397492784121],
             [-84.34882164001465, 33.77176318415319],
             [-84.33302879333496, 33.77190587901734],
-            [-84.3313980102539, 33.77331497804007]
-          ]
-        ]
-      }
+            [-84.3313980102539, 33.77331497804007],
+          ],
+        ],
+      },
     },
     {
-      "type": "Feature",
-      "properties": {
-        "stroke": "#555555",
+      type: "Feature",
+      properties: {
+        stroke: "#555555",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "fill": "#0433ff",
-        "fill-opacity": 0.5
+        fill: "#0433ff",
+        "fill-opacity": 0.5,
       },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
+      geometry: {
+        type: "Polygon",
+        coordinates: [
           [
             [-84.34779167175293, 33.82671878571248],
             [-84.3481993675232, 33.882137876996715],
@@ -1234,23 +1254,23 @@
             [-84.356632232666, 33.824330145553894],
             [-84.35401439666748, 33.82568490487915],
             [-84.34967994689941, 33.82575620740694],
-            [-84.34779167175293, 33.82671878571248]
-          ]
-        ]
-      }
+            [-84.34779167175293, 33.82671878571248],
+          ],
+        ],
+      },
     },
     {
-      "type": "Feature",
-      "properties": {
-        "stroke": "#555555",
+      type: "Feature",
+      properties: {
+        stroke: "#555555",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "fill": "#ff40ff",
-        "fill-opacity": 0.5
+        fill: "#ff40ff",
+        "fill-opacity": 0.5,
       },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
+      geometry: {
+        type: "Polygon",
+        coordinates: [
           [
             [-84.40765857696533, 33.78859953746872],
             [-84.39971923828125, 33.79377105772807],
@@ -1361,23 +1381,23 @@
             [-84.40774440765381, 33.80279372086657],
             [-84.40800189971924, 33.797908049015355],
             [-84.407958984375, 33.792023475482004],
-            [-84.40765857696533, 33.78859953746872]
-          ]
-        ]
-      }
+            [-84.40765857696533, 33.78859953746872],
+          ],
+        ],
+      },
     },
     {
-      "type": "Feature",
-      "properties": {
-        "stroke": "#555555",
+      type: "Feature",
+      properties: {
+        stroke: "#555555",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "fill": "#942192",
-        "fill-opacity": 0.5
+        fill: "#942192",
+        "fill-opacity": 0.5,
       },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
+      geometry: {
+        type: "Polygon",
+        coordinates: [
           [
             [-84.45662498474121, 33.82671878571248],
             [-84.45713996887207, 33.82515013402546],
@@ -1488,23 +1508,23 @@
             [-84.4489860534668, 33.826077068046175],
             [-84.45121765136719, 33.8266474839874],
             [-84.45362091064452, 33.826576182202864],
-            [-84.45662498474121, 33.82671878571248]
-          ]
-        ]
-      }
+            [-84.45662498474121, 33.82671878571248],
+          ],
+        ],
+      },
     },
     {
-      "type": "Feature",
-      "properties": {
-        "stroke": "#555555",
+      type: "Feature",
+      properties: {
+        stroke: "#555555",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "fill": "#aa7942",
-        "fill-opacity": 0.5
+        fill: "#aa7942",
+        "fill-opacity": 0.5,
       },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
+      geometry: {
+        type: "Polygon",
+        coordinates: [
           [
             [-84.51104164123535, 33.77978940095692],
             [-84.51473236083984, 33.77351117986332],
@@ -1602,23 +1622,23 @@
             [-84.49722290039062, 33.771691836631966],
             [-84.49760913848877, 33.77590123872481],
             [-84.49808120727539, 33.77757780738553],
-            [-84.51104164123535, 33.77978940095692]
-          ]
-        ]
-      }
+            [-84.51104164123535, 33.77978940095692],
+          ],
+        ],
+      },
     },
     {
-      "type": "Feature",
-      "properties": {
-        "stroke": "#555555",
+      type: "Feature",
+      properties: {
+        stroke: "#555555",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "fill": "#ffffff",
-        "fill-opacity": 0.5
+        fill: "#ffffff",
+        "fill-opacity": 0.5,
       },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
+      geometry: {
+        type: "Polygon",
+        coordinates: [
           [
             [-84.50198650360107, 33.7259815460816],
             [-84.50314521789551, 33.72160906716473],
@@ -1730,23 +1750,23 @@
             [-84.48640823364258, 33.71977077483141],
             [-84.49713706970215, 33.721841081845895],
             [-84.4969654083252, 33.72576738903661],
-            [-84.50198650360107, 33.7259815460816]
-          ]
-        ]
-      }
+            [-84.50198650360107, 33.7259815460816],
+          ],
+        ],
+      },
     },
     {
-      "type": "Feature",
-      "properties": {
-        "stroke": "#555555",
+      type: "Feature",
+      properties: {
+        stroke: "#555555",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "fill": "#5e30eb",
-        "fill-opacity": 0.5
+        fill: "#5e30eb",
+        "fill-opacity": 0.5,
       },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
+      geometry: {
+        type: "Polygon",
+        coordinates: [
           [
             [-84.44847106933594, 33.69806524140501],
             [-84.44546699523926, 33.69831517185256],
@@ -1840,10 +1860,16 @@
             [-84.42439556121826, 33.71909255995229],
             [-84.42606925964355, 33.71448769619881],
             [-84.44872856140137, 33.7147375788638],
-            [-84.44847106933594, 33.69806524140501]
-          ]
-        ]
-      }
-    }
-  ]
-}
+            [-84.44847106933594, 33.69806524140501],
+          ],
+        ],
+      },
+    },
+  ],
+};
+
+var geojson = mapkit.importGeoJSON(bob);
+
+console.log(geojson);
+
+map.addOverlays(geojson.items);

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
 
-    <script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
+    <script src="mapapi.js"></script>
 
     <style>
       #map {
@@ -16,24 +16,6 @@
   <body>
     <div id="map"></div>
 
-    <script>
-      const tokenID =
-        "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjZSNDg3NFE2SjUifQ.eyJpc3MiOiIyNVkyNEw1OThZIiwiaWF0IjoxNjI3ODUwMDA0LCJleHAiOjE2MzAzNTU4NDh9.fdoeHWEVFDYCylDw-AQ8TK-93kfCu4eCfqc691vohbU3eBq-EMn86dGXpMEWrzCUK6kHJdXiKgV5oKvXHj9iQA";
-
-      mapkit.init({
-        authorizationCallback: function (done) {
-          done(tokenID);
-        },
-      });
-
-      var map = new mapkit.Map("map");
-      var center = new mapkit.Coordinate(33.769514, -84.413465);
-      var span = new mapkit.CoordinateSpan(0.106, 0.106);
-      var region = new mapkit.CoordinateRegion(center, span);
-      map.region = region;
-      map.addEventListener("select", function (event) {
-        if (event.overlay) console.log("You selected an overlay.");
-      });
-    </script>
+    <script src="maps.js"></script>
   </body>
 </html>
