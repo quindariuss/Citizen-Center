@@ -9,6 +9,7 @@
 .header {
   grid-area: header;
   padding-left: 50px;
+  display: inline-block;
 }
 .footer {
   grid-area: footer;
