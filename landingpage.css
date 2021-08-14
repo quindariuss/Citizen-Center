@@ -86,7 +86,8 @@ h1 {
   }
   h1 {
     font-family: bulta;
-    font-size: 3em;
+    font-size: 4em;
+    text-align: center;
   }
   .organizations {
     display: grid;
