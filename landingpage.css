@@ -99,6 +99,7 @@ h1 {
   p {
     font-family: ankle;
     font-size: 1em;
+    text-align: center;
   }
   .graphic {
     grid-area: graphic;
