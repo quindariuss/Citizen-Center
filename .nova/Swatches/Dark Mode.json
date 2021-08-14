@@ -1,0 +1,14 @@
+{
+  "swatches" : [
+    {
+      "color" : "#181d27ff",
+      "name" : "Background",
+      "space" : "srgb"
+    },
+    {
+      "color" : "#edededff",
+      "name" : "Text",
+      "space" : "srgb"
+    }
+  ]
+}

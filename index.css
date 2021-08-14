@@ -37,3 +37,19 @@
   width: 100%;
   height: 600px;
 }
+
+body {
+  color: color(srgb 0.094 0.114 0.153);
+  background: color(srgb 0.094 0.114 0.153);
+}
+body.dark-theme {
+  color: color(srgb 0.933 0.933 0.933);
+  background: rgb(24, 29, 39);
+}
+
+a {
+  color: #0033cc;
+}
+body.dark-theme a {
+  color: #809fff;
+}

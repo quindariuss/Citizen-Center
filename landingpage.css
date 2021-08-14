@@ -1,0 +1,95 @@
+@font-face {
+  font-family: ankle;
+  src: url(ankle.otf);
+}
+@font-face {
+  font-family: bulta;
+  src: url(bulta.otf);
+}
+.header {
+  grid-area: header;
+  padding-left: 50px;
+}
+.footer {
+  grid-area: footer;
+  justify-self: center;
+}
+.graphic {
+  grid-area: graphic;
+  max-width: 90%;
+  position: relative;
+  top: -100px;
+}
+.message {
+  grid-area: message;
+  padding-left: 50px;
+  justify-self: center;
+  font-size: 1.5em;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+p {
+  font-family: ankle;
+  font-size: 2em;
+}
+
+h1 {
+  font-family: bulta;
+  font-size: 7em;
+}
+
+.organizations {
+  display: grid;
+  grid-area: organizations;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-self: center;
+  max-height: 10%;
+  justify-items: center;
+}
+
+.organization_message {
+  grid-area: organization_message;
+  justify-self: center;
+}
+.launch {
+  grid-area: launch;
+  justify-self: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header . . ."
+    "message message graphic graphic graphic"
+    " launch launch launch launch launch"
+    "organization_message organization_message organization_message organization_message organization_message"
+    "organizations organizations organizations organizations organizations"
+    "footer footer footer footer footer";
+}
+
+* {
+  background: #eeeeee;
+}
+
+a {
+  background-color: color(srgb 0.094 0.114 0.153 / 0.801);
+  border-radius: 10px;
+  font-family: ankle;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.4s;
+}
+
+a:hover {
+  background-color: #181d27;
+}
