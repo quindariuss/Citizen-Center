@@ -17,9 +17,7 @@
 }
 .graphic {
   grid-area: graphic;
-  max-width: 90%;
-  position: relative;
-  top: -100px;
+  min-width: 500px;
 }
 .message {
   grid-area: message;
@@ -65,12 +63,47 @@ h1 {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-    "header header . . ."
-    "message message graphic graphic graphic"
+    "header . . . ."
+    "message . graphic graphic graphic"
     " launch launch launch launch launch"
     "organization_message organization_message organization_message organization_message organization_message"
     "organizations organizations organizations organizations organizations"
     "footer footer footer footer footer";
+}
+@media (max-width: 700px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header "
+      "graphic"
+      "message"
+      " launch "
+      "organization_message "
+      "organizations "
+      "footer ";
+  }
+  h1 {
+    font-family: bulta;
+    font-size: 3em;
+  }
+  .organizations {
+    display: grid;
+    grid-area: organizations;
+    grid-template-columns: auto;
+    justify-self: center;
+    max-height: 10%;
+    justify-items: center;
+  }
+  p {
+    font-family: ankle;
+    font-size: 1em;
+  }
+  .graphic {
+    grid-area: graphic;
+    min-width: 100px;
+  }
 }
 
 * {
