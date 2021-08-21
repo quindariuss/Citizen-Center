@@ -13,8 +13,14 @@
     <div class="container">
       <div id="map"></div>
       <div id="map_options">
+        <div class="selected_map"></div>
+        <button onclick="getChecked()">click me</button>
         <div class="option">
-          <input type="checkbox" id="Brilliant Minds Network" />
+          <input
+            type="checkbox"
+            id="brilliant_minds_network"
+            value="Brilliant Minds Network"
+          />
           <label for="Brilliant Minds Network">Brilliant Minds Network</label>
         </div>
         <div class="option">
@@ -40,7 +46,7 @@
     <div class="footer">
       <h6>Created for Citizens of Atlanta - 2021</h6>
     </div>
-    <script src="theme.js"></script>
+    <script src="mapscripts.js"></script>
     <script src="maps.js"></script>
   </body>
 </html>
