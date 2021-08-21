@@ -1,14 +1,13 @@
 @font-face {
   font-family: ankle;
-  src: url(ankle.otf);
+  src: url(fonts/ankle.otf);
 }
 @font-face {
   font-family: bulta;
-  src: url(bulta.otf);
+  src: url(fonts/bulta.otf);
 }
 .header {
   grid-area: header;
-  padding-left: 50px;
   display: inline-block;
 }
 .footer {
@@ -84,6 +83,7 @@ h1 {
       "organizations "
       "footer ";
   }
+
   h1 {
     font-family: bulta;
     font-size: 4em;
