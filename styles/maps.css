@@ -40,3 +40,7 @@ h1 {
 .map_options {
   display: grid;
 }
+
+* {
+  background: #eeeeee;
+}
