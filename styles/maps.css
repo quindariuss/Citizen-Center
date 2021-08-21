@@ -41,6 +41,10 @@ h1 {
   display: grid;
 }
 
-* {
+body {
   background: #eeeeee;
+}
+label {
+  font-family: ankle;
+  font-size: 1em;
 }
